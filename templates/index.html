@@ -1,15 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seleccionar Método de Pago</title>
+    <title>Ejemplo integraci&oacute;n Webpay Rest</title>
+    {% include 'include/header.html' %}
 </head>
-<body>
-    <h1>Seleccionar Método de Pago</h1>
-    <ul>
-        <li><a href="/transaccion-completa/create">Pagar con Transacción Completa</a></li>
-        <li><a href="/webpay-plus/create">Pagar con Webpay Plus</a></li>
-    </ul>
+
+<body class="container">
+<h1>Ejemplos Webpay</h1>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+            <th scope="col">Service</th>
+            <th scope="col">Create</th>
+            <th scope="col">Refund</th>
+            <th scope="col">Status</th>
+            </tr>
+        </thead>
+    <tbody>
+    <tr>
+        <td>Webpay Plus</td>
+        <td><a href="/webpay-plus/create">Crear Transacci&oacute;n</a></td>
+        <td><a href="/webpay-plus/refund-form">Reembolsar Transacci&oacute;n</a></td>
+        <td><a href="/webpay-plus/status-form">Consultar Estado Transacci&oacute;n</a></td>
+    </tr>
+    </tbody>
+</table>
+{% include 'include/footer.html' %}
 </body>
 </html>

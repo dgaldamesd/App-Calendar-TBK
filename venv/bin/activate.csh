@@ -8,7 +8,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV "/home/devasc/labs/APP-Calendar-TKB/venv"
+setenv VIRTUAL_ENV "/home/devasc/labs/DEVELOPERS-OFF-FUTURE/APP-Calendar-TKB/transbank-sdk-python-webpay-rest-example/venv"
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/bin:$PATH"

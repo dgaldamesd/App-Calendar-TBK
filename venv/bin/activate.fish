@@ -29,7 +29,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/devasc/labs/APP-Calendar-TKB/venv"
+set -gx VIRTUAL_ENV "/home/devasc/labs/DEVELOPERS-OFF-FUTURE/APP-Calendar-TKB/transbank-sdk-python-webpay-rest-example/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Ejemplo Webpay Plus Mall- Crear Transacci&oacute;n</title>
+    {% include 'include/header.html' %}
+  </head>
+
+  <body class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Ejemplo Webpay Plus Mall - Crear Transacci&oacute;n</a>
+        </li>
+      </ol>
+    </nav>
+    <h1>Ejemplo Webpay Plus Mall</h1>
+
+    <form
+      class="transaccion_completa_form"
+      action="/webpay-plus-mall/create"
+      method="post"
+      style="display: flex; flex-direction: column; width: 50%; font-size: 20px"
+    >
+      <div class="form-group">
+        <label>Orden de compra</label>
+        <input
+          name="buy_order"
+          value="{{ 'buyorder' + dt.utcnow().strftime('%S') }}"
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Id de sesi&oacute;n</label>
+        <input
+          name="session_id"
+          value="{{ 'session' + dt.utcnow().strftime('%S') }}"
+          class="form-control"
+        />
+      </div>
+
+      <h2>Detalles</h2>
+      <hr />
+      <div class="form-group">
+        <label>Detalles de transacci&oacute;n 1</label>
+        <select name="details[0][commerce_code]">
+          <option selected="selected" value="{{ child_commerce_codes[0] }}">
+            Comercio 1 - C&oacute;digo {{ child_commerce_codes[0] }}
+          </option>
+          <option value="{{ child_commerce_codes[1] }}">
+            Comercio 2 - C&oacute;digo {{ child_commerce_codes[1] }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Orden de compra (comercio hijo)</label>
+        <input
+          name="details[0][buy_order]"
+          value="{{ 'abcdef' + dt.utcnow().strftime('%S') }}"
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Monto</label>
+        <input name="details[0][amount]" value="1000" class="form-control" />
+      </div>
+      <hr />
+
+      <div class="form-group">
+        <label>Detalles de transacci&oacute;n 2</label>
+        <select name="details[1][commerce_code]">
+          <option value="{{ child_commerce_codes[0] }}">
+            Comercio 1 - &oacute; {{ child_commerce_codes[0] }}
+          </option>
+          <option selected="selected" value="{{ child_commerce_codes[1] }}">
+            Comercio 2 - C&oacute;digo {{ child_commerce_codes[1] }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Orden de compra (comercio hijo)</label>
+        <input
+          name="details[1][buy_order]"
+          value="{{ 'wxyz' + dt.utcnow().strftime('%S')  }}"
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Monto</label>
+        <input name="details[1][amount]" value="2000" class="form-control" />
+      </div>
+
+      <button type="submit" class="btn btn-success">Aceptar</button>
+    </form>
+  </body>
+</html>

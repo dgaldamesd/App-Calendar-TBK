@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/devasc/labs/APP-Calendar-TKB/venv"
+VIRTUAL_ENV="/home/devasc/labs/DEVELOPERS-OFF-FUTURE/APP-Calendar-TKB/transbank-sdk-python-webpay-rest-example/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
