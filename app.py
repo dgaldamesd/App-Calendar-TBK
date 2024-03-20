@@ -5,7 +5,7 @@ import random
 import os
 
 APP_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TEMPLATE_PATH = os.path.join(APP_PATH, '/home/devasc/labs/DEVELOPERS-OFF-FUTURE/APP-Calendar-TKB/transbank-sdk-python-webpay-rest-example/templates')
+TEMPLATE_PATH = os.path.join(APP_PATH, '/home/devasc/labs/DEVELOPERS-OFF-FUTURE/APP-Calendar-TKB/templates')
 
 bp = Blueprint('webpay_plus', __name__)
 
